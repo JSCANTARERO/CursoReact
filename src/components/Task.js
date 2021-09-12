@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 import './task.css';
 
@@ -27,6 +28,11 @@ class Task extends Component{
         </button>
         </p>
     }
+}
+
+//Aca estamos especificando que el tipo de valor que se debe recibir es de tipo objeto
+Task.propTypes = {
+    task: PropTypes.object.isRequired
 }
 
 const btnDelete ={
