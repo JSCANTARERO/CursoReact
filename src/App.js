@@ -1,9 +1,13 @@
 import React from 'react';
 import './App.css';
 
-function Helloworld(){
+//Los parametros props nos permiten recibir valores u objetos y debe colocarse entre llaves
+function Helloworld(props){
   return(
-    <div id="hello">Hello World</div>
+    <div id="hello">
+      <h3>{props.subtitle}</h3>
+      {props.mytext}
+      </div>
   )
 }
 
@@ -19,7 +23,12 @@ function Helloworld(){
 
 function App() {
   return (
-    <div>This is my component: <Helloworld/></div>
+    <div>
+      This is my component: 
+      <Helloworld mytext="Hello User" subtitle="lorem ispum"/> 
+      <Helloworld mytext="This is a props test" subtitle="component 2"/>
+      <Helloworld mytext="Hello Jorge" subtitle="component 3"/>
+    </div>
   );
 }
 
