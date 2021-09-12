@@ -9,8 +9,4 @@ class Tasks extends Component{
     }
 }
 
-Tasks.protoTypes = {
-    tasks: PropTypes.array.isRequired
-}
-
 export default Tasks;
